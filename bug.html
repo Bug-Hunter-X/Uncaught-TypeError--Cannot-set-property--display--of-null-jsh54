@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be hidden initially.
+  </div>
+  <button onclick="myFunction()">Click Me</button>
+
+  <script>
+    function myFunction() {
+      document.getElementById("myDiv").style.display = "block";
+      //The bug is that the following line was added without checking if the element exists.
+      document.getElementById("myDiv2").style.display = "block"; 
+    }
+  </script>
+</body>
+</html>
