@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be hidden initially.
+  </div>
+  <button onclick="myFunction()">Click Me</button>
+
+  <script>
+    function myFunction() {
+      const div1 = document.getElementById("myDiv");
+      const div2 = document.getElementById("myDiv2");
+
+      if (div1) {
+        div1.style.display = "block";
+      }
+
+      if (div2) {
+        div2.style.display = "block";
+      } else {
+        console.log("Element with id 'myDiv2' not found.");
+      }
+    }
+  </script>
+</body>
+</html>
